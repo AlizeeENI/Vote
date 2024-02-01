@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Je vous invite à voter</title>
+</head>
+<body>
+<p data-th-text="${#ctx.session.currentUser != null} ? ${#ctx.session.currentUser} : 'Non connecté!'"/>
+<H1>Vote</H1>
+<a data-th-href="@{/}" >Vote</a>
+<label for="nomVotant">Indiquez votre nom</label>
+<input type="text" id="nomVotant" data-th-field="*{nomVotant}"/>
+<span data-th-if="${#fields.hasErrors('nomVotant')}" data-th-errors="*{nomVotant}"/> <br>
+
+<label for="dtNaissance">Date de naissance</label>
+<input type="date" id="dtNaissance" data-th-field="*{dtNaissance}"/>
+<span data-th-if="${#fields.hasErrors('dtNaissance')}" data-th-errors="*{dtNaissance}"/> <br><br>
+
+<label for="nomCandidat">Nom du candidat </label>
+<input type="nomCandidat" id="nomCandidat" data-th-field="*{nomCandidat}"/>
+<span data-th-if="${#fields.hasErrors('nomCandidat')}" data-th-errors="*{nomCandidat}"/> <br>
+
+</body>
+</html>

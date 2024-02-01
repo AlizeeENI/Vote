@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Liste des résultats</title>
+</head>
+<body>
+<p data-th-text="${#ctx.session.currentUser != null} ? ${#ctx.session.currentUser} : 'Non connecté!'"/>
+<H1>URL 2</H1>
+<a data-th-href="@{/}" >Accueil</a>
+</body>
+</html>
